@@ -4,3 +4,4 @@ dist
 playwright/*/shot-*.png
 playwright/*/state-*.json
 playwright/*/errors-*.json
+.vercel

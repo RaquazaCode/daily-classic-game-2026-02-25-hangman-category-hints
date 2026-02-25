@@ -1,5 +1,6 @@
 node_modules
 dist
 .DS_Store
-playwright/**/*.png
-playwright/**/*.json
+playwright/*/shot-*.png
+playwright/*/state-*.json
+playwright/*/errors-*.json

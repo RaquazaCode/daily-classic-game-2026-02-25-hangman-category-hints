@@ -1,0 +1,52 @@
+{
+  "assets": [
+    {
+      "name": "Loading Spinner",
+      "file": "public/lottie/loading-spinner.lottie",
+      "source_url": "https://lottiefiles.com/free-animation/loading-spinner-EHsoRBlir1",
+      "source_platform": "LottieFiles",
+      "license": "Lottie Simple License (FL 9.13.21)",
+      "author": "Emilie",
+      "downloaded_at": "2026-02-25",
+      "intended_use": "Ready state ambient loading badge in stage overlay",
+      "tags": ["ui-micro", "loading", "idle"],
+      "asset_url": "https://assets-v2.lottiefiles.com/a/4fa2354a-117e-11ee-9179-6f4aefc1f6f2/W9MnQWp3Yk.lottie"
+    },
+    {
+      "name": "Confetti Burst",
+      "file": "public/lottie/confetti-burst.lottie",
+      "source_url": "https://lottiefiles.com/free-animation/confetti-animation-aIALLqIXFa",
+      "source_platform": "LottieFiles",
+      "license": "Lottie Simple License (FL 9.13.21)",
+      "author": "Anwito Das",
+      "downloaded_at": "2026-02-25",
+      "intended_use": "Win-state celebration hero overlay",
+      "tags": ["icon-explainer", "success", "celebration"],
+      "asset_url": "https://assets-v2.lottiefiles.com/a/09ead3ae-116f-11ee-95e9-e3b488fa329d/rarEiTuaaH.lottie"
+    },
+    {
+      "name": "Skull Turnaround",
+      "file": "public/lottie/skull-turnaround.lottie",
+      "source_url": "https://lottiefiles.com/free-animation/skull-and-bone-turnaround-J4CDqhbr69",
+      "source_platform": "LottieFiles",
+      "license": "Lottie Simple License (FL 9.13.21)",
+      "author": "Amy Whiteman",
+      "downloaded_at": "2026-02-25",
+      "intended_use": "Lose-state feedback hero overlay",
+      "tags": ["icon-explainer", "failure", "game-over"],
+      "asset_url": "https://assets-v2.lottiefiles.com/a/7b658406-117a-11ee-9e8c-5b388298f159/oMzn5xDBzy.lottie"
+    },
+    {
+      "name": "Checkmark Success",
+      "file": "public/lottie/checkmark-success.lottie",
+      "source_url": "https://lottiefiles.com/free-animation/checkmark-success-fjBcuUTVNf",
+      "source_platform": "LottieFiles",
+      "license": "Lottie Simple License (FL 9.13.21)",
+      "author": "Craig Betts",
+      "downloaded_at": "2026-02-25",
+      "intended_use": "Correct-letter micro-interaction pulse",
+      "tags": ["ui-micro", "check", "feedback"],
+      "asset_url": "https://assets-v2.lottiefiles.com/a/0d87e684-1154-11ee-92cd-2bb38f8845e1/z1bhuTQ2e2.lottie"
+    }
+  ]
+}

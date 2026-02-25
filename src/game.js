@@ -45,6 +45,7 @@ export function createInitialState(wordBank = DEFAULT_WORD_BANK) {
     wrongGuesses: [],
     revealedLetters: 0,
     lastGuess: null,
+    lastGuessResult: 'none',
     keyboardRows: ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM']
   };
 }
@@ -89,6 +90,7 @@ export function startRound(state) {
     wrongGuesses: [],
     revealedLetters,
     lastGuess: null,
+    lastGuessResult: 'none',
     message: 'Guess letters with keyboard or mouse'
   };
 }
@@ -99,6 +101,7 @@ export function togglePause(state) {
       ...state,
       mode: state.pauseBeforeMode || 'playing',
       pauseBeforeMode: null,
+      lastGuessResult: state.lastGuessResult || 'none',
       message: 'Resumed'
     };
   }
@@ -132,6 +135,7 @@ export function applyGuess(state, inputLetter) {
     return {
       ...state,
       message: `${letter} was already tried`,
+      lastGuessResult: 'repeat',
       lastGuess: letter
     };
   }
@@ -163,6 +167,7 @@ export function applyGuess(state, inputLetter) {
       score,
       bestScore: Math.max(score, state.bestScore),
       revealedLetters: updatedRevealed,
+      lastGuessResult: 'hit',
       message,
       lastGuess: letter
     };
@@ -179,6 +184,7 @@ export function applyGuess(state, inputLetter) {
       wrongGuesses,
       score,
       bestScore: Math.max(score, state.bestScore),
+      lastGuessResult: 'miss',
       message: `Round over. Word was ${state.solution}. Press Enter to retry.`,
       lastGuess: letter
     };
@@ -190,6 +196,7 @@ export function applyGuess(state, inputLetter) {
     wrongGuesses,
     score,
     bestScore: Math.max(score, state.bestScore),
+    lastGuessResult: 'miss',
     message: `${letter} is not in the word`,
     lastGuess: letter
   };
@@ -221,6 +228,7 @@ export function buildTextSnapshot(state) {
     best_score: state.bestScore,
     elapsed_ms: Math.round(state.elapsedMs),
     last_guess: state.lastGuess,
+    last_guess_result: state.lastGuessResult || 'none',
     message: state.message
   };
 }

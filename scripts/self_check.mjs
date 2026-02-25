@@ -27,10 +27,12 @@ assert.equal(state.category, 'Animals', 'first round should pull first category'
 state = applyGuess(state, 'O');
 assert.equal(state.score, 40, 'correct guess should add points');
 assert.equal(state.wrongGuesses.length, 0, 'correct guess should not add misses');
+assert.equal(state.lastGuessResult, 'hit', 'correct guess should flag hit result');
 
 state = applyGuess(state, 'Z');
 assert.equal(state.wrongGuesses.length, 1, 'wrong guess should increase misses');
 assert.equal(state.score, 30, 'wrong guess should reduce points with floor at 0');
+assert.equal(state.lastGuessResult, 'miss', 'wrong guess should flag miss result');
 
 state = stepState(state, 1000);
 assert.equal(state.elapsedMs, 1000, 'step should advance elapsed time while playing');
@@ -53,5 +55,6 @@ const snapshot = buildTextSnapshot(state);
 assert.equal(snapshot.mode, 'won', 'text snapshot reflects mode');
 assert.equal(snapshot.category, 'Animals', 'text snapshot includes category hint');
 assert.equal(snapshot.masked_word, 'O T T E R', 'text snapshot includes masked word view');
+assert.equal(snapshot.last_guess_result, 'hit', 'text snapshot includes last guess result');
 
 console.log('self_check complete');
